@@ -692,7 +692,7 @@
 	var/holder = reservoirs[rid]
 	var/datum/reagents/R = holder:reagents
 	while(R.total_volume && abs(R.total_temperature - temp) > 3)
-		R.temperature_reagents(temp, 10)
+		R.temperature_reagents(temp, 10, 10)
 		sleep(10)
 
 	showMessage("[src.holder] clicks.") // Relay kicking off
